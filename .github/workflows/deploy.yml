@@ -2,9 +2,9 @@ name: Deploy Site
 
 on:
   push:
-    branches: [ hugo ]
+    branches: [ master ]
   pull_request:
-    branches: [ hugo ]
+    branches: [ master ]
   schedule:
     - cron: '25 0 * * *'
 
@@ -27,7 +27,7 @@ jobs:
       run: sudo apt-get update
     - name: Build
       env:
-        GITHUB_WIKI_URL: 'https://github.com/yuzu-mirror/yuzu.wiki.git'
+        GITHUB_WIKI_URL: 'https://github.com/paypay-a/yuzu.wiki.git'
         TENANT: 'yuzu'
       run: ./.ci/build.sh
     - name: Deploy

@@ -30,6 +30,7 @@ jobs:
       env:
         GITHUB_WIKI_URL: 'https://github.com/paypay-a/yuzu.wiki.git'
         TENANT: 'yuzu'
+      run: chmod +x .ci/build.sh
       run: ./.ci/build.sh
     - name: Deploy
       if: ${{ ! github.base_ref }}

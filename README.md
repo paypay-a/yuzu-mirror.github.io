@@ -1,3 +1,5 @@
+[![Deploy Site](https://github.com/paypay-a/yuzu-mirror.github.io/actions/workflows/site.yml/badge.svg)](https://github.com/paypay-a/yuzu-mirror.github.io/actions/workflows/site.yml)
+
 This repo contains the sources for the yuzu-emu website at https://yuzu-emu.org/
 
 # Local Development

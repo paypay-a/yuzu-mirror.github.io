@@ -34,7 +34,7 @@ jobs:
       if: ${{ ! github.base_ref }}
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.TOKEN }}
         branch: master
         folder: build
         clean: true

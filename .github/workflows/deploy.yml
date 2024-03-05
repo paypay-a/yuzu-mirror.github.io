@@ -26,11 +26,12 @@ jobs:
         restore-keys: ${{ runner.os }}-rendered-
     - name: Install dependencies
       run: sudo apt-get update
+    - name: Fix Build.sh
+      run: chmod +x .ci/build.sh
     - name: Build
       env:
         GITHUB_WIKI_URL: 'https://github.com/paypay-a/yuzu.wiki.git'
         TENANT: 'yuzu'
-      run: chmod +x .ci/build.sh
       run: ./.ci/build.sh
     - name: Deploy
       if: ${{ ! github.base_ref }}
